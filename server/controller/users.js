@@ -20,7 +20,7 @@ export const signin = async (req, res) =>{
 }
 
 export const signup = async (req, res) =>{
-    const { email, password, firstName, lastName } = req.body
+    const { email, password, firstName, lastName, confirmPassword } = req.body
 
     try {
         const existingUser = await User.findOne({ email })
